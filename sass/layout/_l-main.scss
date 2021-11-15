@@ -1,0 +1,6 @@
+$layout-name: "l-main";
+.#{$layout-name} {
+  background-color: blue;
+  color: azure;
+  grid-area: main;
+}
