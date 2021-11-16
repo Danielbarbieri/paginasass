@@ -1,6 +1,21 @@
 $layout-name: "l-main";
 .#{$layout-name} {
-  background-color: blue;
   color: azure;
+  display: grid;
   grid-area: main;
+  grid-template-areas:
+    "aside"
+    "content";
+  @include breakpoint(large-up) {
+    grid-template-areas:
+      "aside content"
+      "aside content";
+    grid-template-columns: rem(250) 1fr;
+    grid-template-rows: minmax(0, auto) 1fr;
+
+    .is-page-single & {
+      grid-template-areas: "content aside";
+      grid-template-columns: 1fr rem(250);
+    }
+  }
 }

@@ -1,1 +1,1 @@
-Treinando páginas com BFB e sass
+Treinando páginas com BFB e scss

@@ -1,6 +1,13 @@
 $layout-name: "l-header";
 .#{$layout-name} {
-  background-color: red;
+  background-color: var(--color-orange);
   color: rgb(17, 0, 255);
   grid-area: header;
+  grid-template-columns: $global-max-width;
+  height: rem(70);
+  justify-content: center;
+
+  @include breakpoint(large-up){
+      display: grid;
+  }
 }

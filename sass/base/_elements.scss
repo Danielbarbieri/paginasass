@@ -89,11 +89,16 @@ body {
   font-family: Nunito, -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: $global-font-size;
-  display: grid;
   grid-template-areas:
     "header header header"
     ". main ."
     "footer footer footer";
+  grid-template-columns: 1fr $global-max-width 1fr;
+  row-gap: $global-module-size;
+
+  @include breakpoint(large-up) {
+    display: grid;
+  }
 }
 
 :focus-visible {

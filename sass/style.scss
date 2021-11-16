@@ -8,6 +8,11 @@
 @import "abstract/z-index";
 :root {
     @each $name,
+    $color in $project-colors {
+        --color-#{$name}: #{$color};
+    }
+
+    @each $name,
     $color in $webfatorial-colors {
         --color-#{$name}: #{$color};
     }
@@ -36,11 +41,13 @@
 // ==========================================================================
 @import "layout/l-header";
 @import "layout/l-main";
+@import "layout/l-content";
+@import "layout/l-aside";
 @import "layout/l-footer";
 // ==========================================================================
 // Component
 // ==========================================================================
-// @import "component/c-";
+@import "component/c-filter";
 // ==========================================================================
 // State
 // ==========================================================================
